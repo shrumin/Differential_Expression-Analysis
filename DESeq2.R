@@ -71,11 +71,11 @@ res_A_C_sort=res_A_C[order(res_A_C$padj),]
 res_B_C_sort=res_B_C[order(res_B_C$padj),]
 
 ##SIGNIFICANT ONES
-res_A_B_sig<- subset(res_A_B_sort, 0.001)
+res_A_B_sig<- subset(res_A_B_sort, padj<0.05)
 write.csv(res_A_B_sig, "/Users/shrumin/Downloads/sig_A_B.csv", row.names=TRUE)
-res_A_C_sig<- subset(res_A_C_sort, 0.001)
+res_A_C_sig<- subset(res_A_C_sort, padj<0.05)
 write.csv(res_A_C_sig, "/Users/shrumin/Downloads/sig_A_C.csv", row.names=TRUE)
-res_B_C_sig<- subset(res_B_C_sort, 0.001)
+res_B_C_sig<- subset(res_B_C_sort, padj<0.05)
 write.csv(res_B_C_sig, "/Users/shrumin/Downloads/sig_B_C.csv", row.names=TRUE)
 ###################################################################################################
 ##MA PLOT
